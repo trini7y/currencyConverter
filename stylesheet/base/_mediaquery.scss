@@ -1,0 +1,83 @@
+//Small smart phone 340-375
+$small_screen: 300px;
+
+$smallScreen: 360px;
+
+//large screen 400px
+$medium_screen: 414px;
+
+$medium_screenOne:500px;
+$medium_screenTwo:600px;
+
+//tablets, ipads screen size
+$tablet: 760px;
+$tablet2: 1024px;
+
+
+//Laptop 15 inch
+$laptops:1440px;
+
+//special
+$iphone:415px;
+$iphone2:470px;
+
+//alienware
+$alien:1920px;
+
+@mixin respond-to($media){
+	@if $media == handhelds {
+		@media only screen and (min-width: $small_screen) and (max-width:$smallScreen)
+		{
+			@content;
+		}
+	}
+	@else if $media == mediumScreen{
+		@media only screen and (min-width:$smallScreen) and (max-width:$medium_screen)
+		{
+			@content;
+		}
+	}
+	@else if $media == mediumScreenTwo {
+		@media only screen and(min-width: $iphone2) and (max-width:$medium_screenOne)
+		{
+			@content;
+		}
+	}
+	@else if $media == mediumScreenThree {
+		@media only screen and(min-width: $medium_screenOne) and (max-width:$medium_screenTwo)
+		{
+			@content;
+		}
+	}
+	@else if  $media == mediumLarge{
+		@media only screen and (min-width:$medium_screenTwo) and (max-width:$tablet)
+		{
+			@content;
+		}
+	}
+	@else if $media == LargeTablet{
+		@media only screen and(min-width:$tablet) and (max-width:$tablet2)
+		{
+			@content;
+		}
+	}
+	@else if $media == laptop{
+		@media only screen and(min-width:$tablet2) and (max-width:$laptops)
+		{
+			@content;
+		}
+	}
+
+	@else if $media == iphone{
+		@media only screen and(min-width:$iphone) and (max-width:$iphone2)
+		{
+			@content;
+		}
+	}
+	@else if $media == alienware{
+		@media only screen and(min-width:$alien)
+		{
+			@content;
+		}
+	}
+}

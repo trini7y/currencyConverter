@@ -1,0 +1,61 @@
+/**
+ * Basic typography style for copy text
+ */ 
+ @font-face{
+  font-family:$site-font;
+  src: url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+  src: url('../fonts/Roboto-Light.ttf');
+}
+
+@font-face{
+    font-family:$menu_font;
+    src:url('../fonts/Agency.ttf');
+}
+@font-face{
+    font-family:$description;
+    src:url('../fonts/courier.ttf');
+}
+body {
+  background-color:$brand-color;
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+  overflow-x:  hidden;
+
+  opacity: 1;
+  transition: 1s opacity;
+
+    .fade-out {
+        opacity: 0;
+        transition: none;
+    }
+}
+body::-webkit-scrollbar{
+    width:0.5em;
+}
+body::-webkit-scrollbar-track{
+   -webkit-box-shadow:insect 1px 2px ;
+}
+body::-webkit-scrollbar-thumb{
+    background-color:$special-text-color;
+    outline:1px solid slategrey;
+}
+body::-moz-scrollbar{
+    width:0.5em;
+}
+body::-moz-scrollbar-track{
+   -moz-box-shadow:insect 1px 2px ;
+}
+body::-moz-scrollbar-thumb{
+    background-color:$special-text-color;
+    outline:1px solid slategrey;
+}
+body::-ms-scrollbar{
+    width:0.5em;
+}
+body::-ms-scrollbar-track{
+   -ms-box-shadow:insect 1px 2px ;
+}
+body::-ms-scrollbar-thumb{
+    background-color:$special-text-color;
+    outline:1px solid slategrey;
+}
